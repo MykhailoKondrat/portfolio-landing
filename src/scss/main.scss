@@ -1,8 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-$primary-color: red;
-h1{
-	color: $primary-color;
-}
-div {
-	color: $primary-color;
+$primary-color: green;
+
+#card-1{
+	background-image: url("../img/card-bg-1.png");
 }

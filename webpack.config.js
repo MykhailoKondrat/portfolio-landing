@@ -1,8 +1,9 @@
 // webpack v4
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
@@ -11,26 +12,31 @@ module.exports = {
   },
   module: {
     rules: [
-    	{
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: [ 'css-loader', 'postcss-loader', 'sass-loader']
-          })
-     	}
+     {
+        test: /\.scss$/i,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader','postcss-loader','sass-loader'],
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader'
+        },
+      },
       ]
   },
   plugins: [ 
-    new ExtractTextPlugin(
+    new MiniCssExtractPlugin(
       {filename: 'style.css'}
-  ),
+      ),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
     }),
-    new LiveReloadPlugin()
+    new LiveReloadPlugin(),
+    new CopyPlugin([
+      { from: './src/img', to: './img' }
+    ])
   ]
 };
