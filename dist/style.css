@@ -7197,6 +7197,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.hightlight-text {
+  color: #007FFF; }
+
 nav.navbar {
   padding: 92px 0; }
   nav.navbar .nav-item {
@@ -7218,39 +7221,51 @@ nav.navbar {
       color: #007FFF; }
 
 h1 {
+  font-family: Helvetica, Arial, sasn-serif;
   font-size: 3rem;
   color: #000000;
   line-height: 3.75rem;
-  font-weight: 200;
+  font-weight: 300;
   margin-bottom: 48px; }
-  h1 span {
-    color: #007FFF; }
 
 h2 {
   font-family: Helvetica, Arial, sasn-serif;
   font-size: 1.75rem;
-  color: #FFFFFF;
+  color: #000000;
   line-height: 2.2rem;
-  font-weight: 200; }
+  font-weight: 300; }
 
 h4 {
+  font-family: Helvetica, Arial, sasn-serif;
   color: #979797;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.75rem; }
 
+.aside-text {
+  display: flex;
+  align-content: flex-start;
+  padding-top: 20px; }
+  .aside-text h4 {
+    transform: rotate(-90deg); }
+
 .image-block {
-  margin-top: 120px; }
+  margin-top: 7.5rem; }
   .image-block .card-columns {
     -webkit-columns: 2;
        -moz-columns: 2;
             columns: 2; }
   .image-block .card {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    border-radius: 0px;
+    border: 0px;
+    margin-bottom: 1.5rem; }
   .image-block .card-img-overlay {
     display: flex;
     align-items: flex-end; }
+  .image-block .card-img {
+    border-radius: 0px; }
   .image-block .badge-pill {
     background-color: #FFE300;
     color: #000000;
@@ -7261,11 +7276,81 @@ h4 {
     display: inline-block;
     padding-top: 3px;
     font-weight: 700; }
+  .image-block .card-body {
+    border-radius: 0px; }
+  .image-block h2 {
+    text-align: left;
+    color: #fff; }
 
-.aside-text {
-  display: flex;
-  align-content: flex-start;
-  padding-top: 20px; }
-  .aside-text h4 {
-    transform: rotate(-90deg); }
+.skillbox {
+  margin-top: 7.5rem; }
+  .skillbox p {
+    font-family: Helvetica, Arial, sasn-serif;
+    font-size: 1rem;
+    color: #000000;
+    line-height: 30px;
+    font-weight: 300;
+    margin-top: 1.875rem; }
+  .skillbox .row > .col-md-6 {
+    margin-bottom: 3.57rem;
+    padding-left: 10px; }
+
+.partners-logo .col-md-2 {
+  padding-left: 10px; }
+
+.links {
+  margin-top: 7.5rem; }
+  .links p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px; }
+    .links p a {
+      width: 100%;
+      display: inline-block;
+      line-height: 30px; }
+  .links .link-date {
+    text-align: right;
+    display: inline-block;
+    color: #979797;
+    float: right; }
+
+.contacts {
+  margin-top: 7.5rem; }
+  .contacts h2 {
+    padding-bottom: 60px; }
+  .contacts p {
+    font-family: Helvetica, Arial, sasn-serif;
+    font-size: 1rem;
+    color: #000000;
+    line-height: 30px;
+    font-weight: 300; }
+  .contacts .soc-icons {
+    justify-content: flex-start; }
+  .contacts .soc-icons img {
+    height: 16px;
+    margin: auto 15px; }
+  .contacts label {
+    font-family: Helvetica, Arial, sasn-serif;
+    font-size: 0.75rem;
+    color: #000000;
+    letter-spacing: 3px;
+    text-transform: uppercase; }
+  .contacts input {
+    height: 3rem;
+    margin-top: .5rem;
+    border: 0;
+    border-bottom: 1px solid #CFCFCF;
+    border-radius: 0px; }
+    .contacts input:focus {
+      background-color: white--;
+      border-bottom: 1px solid #007FFF; }
+    .contacts input:hover {
+      background-color: #EDEDED; }
+
+* {
+  outline: 0px !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none !important; }
 
