@@ -1,35 +1,60 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container-fluid">
 
-       <nav class="navbar navbar-expand-md">
-          <div class="collapse navbar-collapse row justify-content-md-center">
-            <ul class="navbar-nav col-8">
-              <li class="nav-item col-2"><a href="#" class="nav-link" id="test">Works</a></li>
-              <li class="nav-item col-2"><a href="#" class="nav-link">About</a></li>
-              <li class="nav-item col-4 "><a href="#" class="nav-link"><img src="img/avatar.png" alt="avatar"></a></li> 
-              <li class="nav-item col-2"><a href="#" class="nav-link">Links</a></li>
-              <li class="nav-item col-2"><a href="#" class="nav-link">Contacts</a></li>
+    <div class="container-fluid">
+      
+       <nav class="navbar navbar-expand-md fixed-top">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapser">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <a href="#" class="navbar-brand"> <img src="img/avatar.png" alt="avatar" ></a>
+<!--             -->
+          
+          <div class="collapse navbar-collapse row justify-content-md-center justify-content-sm-start" id="collapser">
+            <ul class="navbar-nav col-md-8 col-xs-12">
+              <li class="nav-item col-md-2">
+                <a href="#" class="nav-link" id="test">Works</a>
+              </li>
+              <li class="nav-item col-md-2 ">
+                <a href="#" class="nav-link">About</a>
+              </li>
+              <li class="nav-item col-md-4 d-none d-md-block ">
+                <a href="#" class="nav-link">
+                  <img src="img/avatar.png" alt="avatar">
+                </a>
+              </li> 
+              <li class="nav-item col-md-2">
+                <a href="#" class="nav-link">Links</a>
+              </li>
+              <li class="nav-item col-md-2">
+                <a href="#" class="nav-link">Contacts</a>
+              </li>
             </ul>
           </div>
         </nav>
 
-      <div class="quote-header row justify-content-sm-center">
-            <div class="col-xs-8 col-md-5">
+      <div class="quote-header row justify-content-center">
+            <div class="col-xs-8 col-md-5 headline">
               <h1 class="text-center">Motivation Is The First Step To <span class="hightlight-text">Success</span></h1>
             </div>
             <div class="w-100"></div>
             <div class="col-xs-2">
-              <div class="row justify-content-sm-center">
+              <div class="row justify-content-xs-center">
                 <img src="img/twitter.svg" alt="twitter" class="col-4">
                 <img src="img/behance.svg" alt="behance" class="col-4">
                 <img src="img/instagram.svg" alt="instagram" class="col-4">
               </div>
             </div>
       </div>
+
+
+
 
        <div class="image-block row">
           <div class="col-xs-12 col-md-1"></div>   
@@ -115,15 +140,15 @@
       </div>
 
       <div class="partners-logo row">
-              <div class=" offset-md-2 col-md-2">
-                <img src="./img/google.svg" alt="google">
-              </div>
-              <div class="col-md-2">
-                <img src="./img/airbnb.svg" alt="airbnb">
-              </div>
-              <div class="col-md-2">
-                <img src="./img/dropbox.svg" alt="dropbox">
-              </div>
+        <div class=" offset-md-2 col-md-2 col-4">
+          <img src="./img/google.svg" alt="google">
+        </div>
+        <div class="col-md-2 col-4">
+          <img src="./img/airbnb.svg" alt="airbnb">
+        </div>
+        <div class="col-md-2 col-4">
+          <img src="./img/dropbox.svg" alt="dropbox">
+        </div>
       </div>
 
       <div class="links row">
@@ -161,7 +186,7 @@
         <div class="col-md-2 offset-md-2 offset-xs-0">
           <p>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones.
             <div class="row soc-icons">
-              <img src="img/twitter.svg" alt="twitter" class="">
+              <img src="img/twitter.svg" alt="twitter" class="" text="Twitter">
               <img src="img/behance.svg" alt="behance" class="">
               <img src="img/instagram.svg" alt="instagram" class="">
             </div>
@@ -169,27 +194,32 @@
         </div>
         <div class="col-md-6">
           <form action="">
-            <div class="form-group">
-              <label for="username">Name</label>
-              <input type="text" class="form-control" id="username">
+            <div class="row">
+              <div class="form-group col-md-10">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="username">
+              </div>
+              <div class="form-group col-md-10 order-md-2">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group col-md-10 order-md-3">
+                <label for="message">Message</label>
+                <textarea type="text" class="form-control" id="message" rows="5"></textarea>
+              </div>
+              <div class="col-md-2 col-12 order-md-1">
+                <button type="submit" class="btn btn-primary"><img src="./img/Send.svg" alt="send" text="Send"></button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea type="text" class="form-control" id="message" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit<img src="" alt=""></button>
           </form>
         </div>
       </div>
-      <footer class="card-footer row">
+
+      <footer class="card-footer row no-gutters">
         <div class="col-md-3 offset-md-2 col-xs-12">
-          <p>Copyright © 2018 Denis Abdullin – deab.ru</p>
+          <p>Copyright © 2020 Mykhailo Kondrat</p>
         </div>
-       <div class="col-md-4 offset-md-2 col-xs-12">
+       <div class="col-md-4 offset-md-1 col-xs-12">
         <span>Invoicing</span>
          <span>Documentation</span>
        </div>

@@ -11,54 +11,22 @@ $main-font: Helvetica, Arial, sasn-serif;
 $font-bold:700;
 $font-regular:400;
 $font-light:300;
+$base-font-size:16px;
 //repeatable margins 
 $row-margin:7.5rem;//margint between rows;
-//font-mixins
 
-
-.hightlight-text{
-	color: $c-blue;
-}
-nav.navbar{
-	padding: 92px 0;
-	.nav-item{
-		display: flex;
-		align-items: center;
-		letter-spacing: 3px;
-		&:nth-child(-n+2){
-			padding-left: 0px;
-		}
-		&:nth-child(3){
-			justify-content: center;
-		}
-		&:nth-child(n+4){
-			justify-content: flex-end;
-			padding-right: -0px;
-		}
-		.nav-link{
-			font-family: $main-font;
-			font-size: 0.75rem;
-			font-weight: $font-regular;
-			text-transform: uppercase;
-			color:$c-blue;
-		}
-	}
-}
-
-h1{
+// General text styles
+html{
+	font-size: $base-font-size;
 	font-family: $main-font;
+}
+h1{
 	font-size: 3rem;
 	color: $c-black;
 	line-height: 3.75rem;
 	font-weight: $font-light;
-
-	span{
-		
-	}
-	margin-bottom: 48px;
 }
 h2{
-	font-family: $main-font;
 	font-size: 1.75rem;
 	color: $c-black;
 	line-height: 2.2rem;
@@ -68,26 +36,102 @@ h4{
 	font-family: $main-font;
 	color: $c-secondary-grey-dark;
 	text-transform: uppercase;
-	letter-spacing:3px;
+	letter-spacing:0.187rem;
 	font-size: 0.75rem;
+}	
+p{
+	font-size: 1rem;
+	font-size: 1rem;
+	color: $c-black;
+	line-height: 30px;
+	font-weight: $font-light;
 }
+.hightlight-text{
+	color: $c-blue;
+}
+
 .aside-text {
 	display:flex;
 	align-content: flex-start;
-	padding-top: 20px;
+	padding-top: 1.25rem;
 	h4{
 	transform: rotate(-90deg);
 	}
 }
+//navbar style
+nav.navbar{
+	padding: 5.75rem 0;
+	.navbar-nav{
+		padding-right: 0;
+	}
+	.navbar-toggler{
+		align-self: center;
+		padding-top: 0;
+	}
+	
+	.navbar-toggler-icon::before,.navbar-toggler::after{
+		width: 20px;
+		height: 3px;
+		background-color:$c-blue;
+		display: block;
+		position: relative;
+		content:'';
 
+	}
+	.navbar-toggler::after{
+		top:-20px;
+	}
+	.nav-item{
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.187rem;
+		&:nth-child(-n+2){
+			padding-left: 0;
+		}
+		&:nth-child(3){
+			text-align: center;
+		}
+		&:nth-child(n+4){
+			justify-content: flex-end;
+			padding-right: 0px;
+		}
+		.nav-link{
+			font-family: $main-font;
+			font-size: 0.75rem;
+			font-weight: $font-regular;
+			text-transform: uppercase;
+			color:$c-blue;
+			padding-right: 0;
+		&:hover{
+			text-decoration: underline;				
+			}
+		}
+	}
+	.navbar-brand{
+			display: none;
+	}
+	.navbar-collapse{
+		background-color:#ffffff;
+	}
+}
+
+//sections styles - 1 section per .row
+.quote-header{
+	margin-top: 276px;
+	.headline{
+		margin-bottom: 46px;
+	}
+}
 .image-block{
 	margin-top: $row-margin;
+	h2{
+		text-align: left;
+		color: #ffffff;
+	}
 	.card-columns{
 		columns:2;
 	}
 	.card{
-		width: 100%;
-		height: 100%;
 		border-radius: 0px;
 		border:0px;
 		margin-bottom: 1.5rem;
@@ -102,31 +146,22 @@ h4{
     .badge-pill{
     	background-color: $c-yellow;
     	color:$c-black;
-    	font-family: $main-font;
-		font-size: 12px;
+   		font-size: 12px;
 		height: 23px;
 		width: auto;
 		display: inline-block;
-		padding-top: 3px;
+		padding: 4px 15px;
+		line-height: 14px;
 		font-weight: $font-bold;
 	}
 	.card-body{
 		border-radius:0px;
-	}
-	h2{
-		text-align: left;
-		color: #fff;
 	}
 }
 
 .skillbox{
 	margin-top: $row-margin;
 	p{
-		font-family: $main-font;
-		font-size: 1rem;
-		color: $c-black;
-		line-height: 30px;
-		font-weight: $font-light;
 		margin-top: 1.875rem;
 	}
 	.row>.col-md-6{
@@ -134,12 +169,13 @@ h4{
 		padding-left: 10px;
 	}
 }
+
 .partners-logo{
-	
 	.col-md-2 {
 		padding-left: 10px;
 	}
 }
+
 .links{
 	margin-top: $row-margin;
 	p{
@@ -162,16 +198,8 @@ h4{
 }
 .contacts{
 	margin-top: $row-margin;
-	h2{
-		padding-bottom: 60px;
-	}
-	p{
-		font-family: $main-font;
-		font-size: 1rem;
-		color: #000000;
-		line-height: 30px;
-		font-weight: $font-light;
-
+	&>div{
+		margin-bottom: 60px;
 	}
 	.soc-icons{
 		justify-content: flex-start;
@@ -188,6 +216,7 @@ h4{
 		text-transform: uppercase;
 	}
 	input{
+		box-shadow: none !important;
 		height: 3rem;
 		margin-top: .5rem;
 		border: 0;
@@ -199,16 +228,148 @@ h4{
 		}
 		&:hover{
 			background-color: $c-secondary-grey-light;
-
 		}
+	}
+	textarea{
+		box-shadow: none !important;
+		border: 0;
+		border-bottom: 1px solid $c-secondary-grey-mid;
+		border-radius: 0px;	
+		&:focus{
+			background-color: white--;
+			border-bottom: 1px solid $c-blue;
+		}
+		&:hover{
+			background-color: $c-secondary-grey-light;
+		}
+	}	
+	button{
+			width: 52px;
+			height: 52px;
+			background-color: $c-blue;
+			border-radius: 52px;
+			border: 0;
+	}
+}
+footer.card-footer{
+	background-color: #ffffff;
+	border-top:0px;
+	padding: 0; 
+	div{
+		display: flex;
+		justify-content: space-between;
+	}
+	span{
+		color:$c-secondary-grey-mid;
+		padding-left: 80px;
+		text-align: right;
+		display: inline-block;
+		
 	}
 }
 
-
 *{
- //border: 1px solid blue;
+  // border: 1px solid blue;
   outline:0px !important;
    appearance:none;
-   box-shadow: none !important;
+  
+}
+
+
+@media only screen and (max-width: 767.93px) { 
+
+	h1{
+		font-size: 1.75rem;
+	}
+	.aside-text {
+		display:flex;
+		justify-content: center;
+		padding-top: 1.25rem;
+		margin-bottom: 2rem;
+		h4{
+			transform: rotate(0);
+		}
+	}
+
+	nav.navbar {
+		height: 160px;
+		padding: 5.75rem 0;
+		padding: 0;
+		background-color:#ffffff;
+
+		.nav-item{
+			display: block;
+			padding: 0;
+			text-align: center;
+
+			.nav-link{
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		.navbar-toggler{
+			position: fixed;
+			z-index: 1000;
+		}
+		.navbar-collapse{
+			height:100vh;
+			background-color: #ffffff;
+			z-index:100;
+			box-shadow: 0px -1px 43px -16px rgba(0,0,0,0.75);
+		}
+		.navbar-brand{
+			width: 100%;
+			text-align: center;
+			z-index:99;
+			position: fixed;
+			display: block;
+		}
+	}
+
+	.quote-header {
+   		 margin-top: 172;
+	}
+	
+
+	.image-block{
+		.card-columns{
+		columns:1;
+		}
+	}
+	.partners-logo{
+		div{
+			display: flex;
+			justify-content: center;
+		}
+		img{
+		 height: 26px;
+		text-align: center;
+
+		 }
+	}
+	.contacts{
+		button{
+			width: 100%;
+			height: 52px;
+			background-color: $c-blue;
+			border-radius: 52px;
+			border: 0;
+			text-align: center;
+			align-self: center;
+		}
+	}
+	footer.card-footer{
+		div{
+		justify-content: flex-start;
+		}
+		span{
+			color:$c-secondary-grey-mid;
+			padding-left: 0;
+			text-align: left;
+			padding-right: 20px;
+		}
+}
+
 }
 
