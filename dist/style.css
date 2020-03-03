@@ -7227,6 +7227,63 @@ p {
   line-height: 30px;
   font-weight: 300; }
 
+label {
+  font-size: 0.75rem;
+  color: #000000;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+  label::after {
+    color: red;
+    content: "*"; }
+
+input {
+  height: 3rem;
+  margin-top: .5rem; }
+  input:enabled {
+    box-shadow: none !important;
+    border: 0;
+    border-bottom: 1px solid #CFCFCF;
+    border-radius: 0px; }
+  input:focus {
+    background-color: white;
+    border-bottom: 1px solid #007FFF; }
+  input:hover {
+    background-color: #EDEDED; }
+  input:invalid {
+    border-bottom: 1 px solid red;
+    color: red; }
+  input:valid {
+    border-bottom: 1px solid green;
+    color: green; }
+
+textarea:enabled {
+  box-shadow: none !important;
+  border: 0;
+  border-bottom: 1px solid #CFCFCF;
+  border-radius: 0px; }
+
+textarea:focus {
+  background-color: white;
+  border-bottom: 1px solid #007FFF; }
+
+textarea:hover {
+  background-color: #EDEDED; }
+
+textarea:invalid {
+  border-bottom: 1 px solid red;
+  color: red; }
+
+textarea:valid {
+  border-bottom: 1px solid green;
+  color: green; }
+
+button.btn {
+  width: 52px;
+  height: 52px;
+  background-color: #007FFF;
+  border-radius: 100px;
+  border: 0; }
+
 .hightlight-text {
   color: #007FFF; }
 
@@ -7295,7 +7352,8 @@ nav.navbar {
   .image-block .card {
     border-radius: 0px;
     border: 0px;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    background-color: #000000; }
   .image-block .card-img-overlay {
     display: flex;
     align-items: flex-end; }
@@ -7350,40 +7408,6 @@ nav.navbar {
   .contacts .soc-icons img {
     height: 16px;
     margin: auto 15px; }
-  .contacts label {
-    font-family: Helvetica, Arial, sasn-serif;
-    font-size: 0.75rem;
-    color: #000000;
-    letter-spacing: 3px;
-    text-transform: uppercase; }
-  .contacts input {
-    box-shadow: none !important;
-    height: 3rem;
-    margin-top: .5rem;
-    border: 0;
-    border-bottom: 1px solid #CFCFCF;
-    border-radius: 0px; }
-    .contacts input:focus {
-      background-color: white--;
-      border-bottom: 1px solid #007FFF; }
-    .contacts input:hover {
-      background-color: #EDEDED; }
-  .contacts textarea {
-    box-shadow: none !important;
-    border: 0;
-    border-bottom: 1px solid #CFCFCF;
-    border-radius: 0px; }
-    .contacts textarea:focus {
-      background-color: white--;
-      border-bottom: 1px solid #007FFF; }
-    .contacts textarea:hover {
-      background-color: #EDEDED; }
-  .contacts button {
-    width: 52px;
-    height: 52px;
-    background-color: #007FFF;
-    border-radius: 52px;
-    border: 0; }
 
 footer.card-footer {
   background-color: #ffffff;

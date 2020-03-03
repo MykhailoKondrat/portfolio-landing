@@ -13,7 +13,7 @@
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapser">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#" class="navbar-brand"> <img src="img/avatar.png" alt="avatar" ></a>
+        <a href="#" class="navbar-brand"> <img src="img/avatar.png" alt="avatar" text="home" ></a>
         <div class="collapse navbar-collapse row justify-content-md-center justify-content-sm-start" id="collapser">
           <ul class="navbar-nav col-md-8 col-xs-12">
             <li class="nav-item col-md-2">
@@ -44,9 +44,15 @@
         <div class="w-100"></div>
         <div class="col-xs-2">
           <div class="row justify-content-xs-center">
+           <a href="#">
             <img src="img/twitter.svg" alt="twitter" class="col-4">
+           </a>
+           <a href="#">
             <img src="img/behance.svg" alt="behance" class="col-4">
-            <img src="img/instagram.svg" alt="instagram" class="col-4">
+           </a>
+            <a href="#">
+              <img src="img/instagram.svg" alt="instagram" class="col-4">
+            </a>
           </div> 
         </div>
       </section>
@@ -62,7 +68,7 @@
           <div class="row">
             <div class="card-columns">
              <div class="card">
-                 <img class="card-img" src="./img/card-bg-1.png" alt="Card image">
+                 <img class="card-img" src="./img/card-bg-1.png" alt="Card image" text="image" >
                <div class="card-img-overlay">
                  <div class="card-body ">
                    <p class="badge-pill" ><span >Featured</span></p>
@@ -72,7 +78,7 @@
              </div>
                          
               <div class="card">
-                <img class="card-img" src="./img/card-bg-3.png" alt="Card image">
+                <img class="card-img" src="./img/card-bg-3.png" alt="Card image" text="image" >
                 <div class="card-img-overlay">
                   <div class="card-body ">
                    <h2>Benjamin Franklin S Method Of Habit Formation</h2>
@@ -81,7 +87,7 @@
               </div> 
          
             <div class="card">
-              <img class="card-img" src="./img/card-bg-2.png" alt="Card image">
+              <img class="card-img" src="./img/card-bg-2.png" alt="Card image" text="image" >
               <div class="card-img-overlay">
                 <div class="card-body">
                   <h2>How Great Is The Strength Of Your Belief</h2>
@@ -90,7 +96,7 @@
             </div>
         
             <div class="card">
-              <img class="card-img" src="./img/card-bg-4.png" alt="Card image">
+              <img class="card-img" src="./img/card-bg-4.png" alt="Card image" text="image" >
               <div class="card-img-overlay">  
                 <div class="card-body">
                   <p><span class="badge-pill badge-primary">Featured</span></p>
@@ -181,9 +187,15 @@
         <div class="col-md-2 offset-md-2 offset-xs-0">
           <p>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones.
             <div class="row soc-icons">
-              <img src="img/twitter.svg" alt="twitter" class="" text="Twitter">
-              <img src="img/behance.svg" alt="behance" class="">
-              <img src="img/instagram.svg" alt="instagram" class="">
+              <a href="#">
+                <img src="img/twitter.svg" alt="twitter" class="" text="Twitter">
+              </a>
+              <a href="#">
+                <img src="img/behance.svg" alt="behance" class="">
+              </a>
+              <a href="#">
+                <img src="img/instagram.svg" alt="instagram" class="">
+              </a>
             </div>
         
         </div>
@@ -192,15 +204,15 @@
             <div class="row">
               <div class="form-group col-md-10">
                 <label for="username">Name</label>
-                <input type="text" class="form-control" id="username">
+                <input type="text" class="form-control" id="username" placeholder="John Snow" required>
               </div>
               <div class="form-group col-md-10 order-md-2">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" placeholder="your_email@gmail.com" required>
               </div>
               <div class="form-group col-md-10 order-md-3">
                 <label for="message">Message</label>
-                <textarea type="text" class="form-control" id="message" rows="5"></textarea>
+                <textarea type="text" class="form-control" id="message" rows="5" placeholder="Your message here"  max=300 required></textarea>
               </div>
               <div class="col-md-2 col-12 order-md-1">
                 <button type="submit" class="btn btn-primary"><img src="./img/Send.svg" alt="send" text="Send"></button>

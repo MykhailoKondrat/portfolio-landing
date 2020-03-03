@@ -14,7 +14,30 @@ $font-light:300;
 $base-font-size:16px;
 //repeatable margins 
 $row-margin:7.5rem;//margint between rows;
-
+// inputs styles 
+@mixin input-styles{
+	&:enabled{
+	box-shadow: none !important;
+	border: 0;
+	border-bottom: 1px solid $c-secondary-grey-mid;
+	border-radius: 0px;	
+	}	
+	&:focus{
+		background-color: white;
+		border-bottom: 1px solid $c-blue;
+	}
+	&:hover{
+		background-color: $c-secondary-grey-light;
+	}
+	&:invalid{
+		border-bottom: 1 px solid red;
+		color:red;
+	}
+	&:valid{
+		border-bottom: 1px solid green;
+		color:green;
+	}
+}
 // General text styles
 html{
 	font-size: $base-font-size;
@@ -38,13 +61,41 @@ h4{
 	text-transform: uppercase;
 	letter-spacing:0.187rem;
 	font-size: 0.75rem;
-}	
+}
+
 p{
 	font-size: 1rem;
 	font-size: 1rem;
 	color: $c-black;
 	line-height: 30px;
 	font-weight: $font-light;
+}
+
+label{
+	font-size: 0.75rem;
+	color: #000000;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	&::after{
+		color:red;
+		content: "*";
+	}
+}
+
+input{
+	@include input-styles;
+	height: 3rem;
+	margin-top: .5rem;
+}
+textarea{
+	@include input-styles;
+}	
+button.btn{
+	width: 52px;
+	height: 52px;
+	background-color: $c-blue;
+	border-radius: 100px;
+	border: 0;
 }
 .hightlight-text{
 	color: $c-blue;
@@ -135,6 +186,7 @@ nav.navbar{
 		border-radius: 0px;
 		border:0px;
 		margin-bottom: 1.5rem;
+		background-color: $c-black;
 	}
 	.card-img-overlay{
     	display: flex;
@@ -207,50 +259,9 @@ nav.navbar{
 	.soc-icons img{
 		height: 16px;
 		margin: auto 15px;
-	}
-	label{
-		font-family: $main-font;
-		font-size: 0.75rem;
-		color: #000000;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-	}
-	input{
-		box-shadow: none !important;
-		height: 3rem;
-		margin-top: .5rem;
-		border: 0;
-		border-bottom: 1px solid $c-secondary-grey-mid;
-		border-radius: 0px;	
-		&:focus{
-			background-color: white--;
-			border-bottom: 1px solid $c-blue;
-		}
-		&:hover{
-			background-color: $c-secondary-grey-light;
-		}
-	}
-	textarea{
-		box-shadow: none !important;
-		border: 0;
-		border-bottom: 1px solid $c-secondary-grey-mid;
-		border-radius: 0px;	
-		&:focus{
-			background-color: white--;
-			border-bottom: 1px solid $c-blue;
-		}
-		&:hover{
-			background-color: $c-secondary-grey-light;
-		}
 	}	
-	button{
-			width: 52px;
-			height: 52px;
-			background-color: $c-blue;
-			border-radius: 52px;
-			border: 0;
-	}
 }
+
 footer.card-footer{
 	background-color: #ffffff;
 	border-top:0px;
