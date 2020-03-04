@@ -7295,19 +7295,34 @@ button.btn {
     transform: rotate(-90deg); }
 
 nav.navbar {
-  padding: 5.75rem 0; }
+  margin: 5.75rem 0;
+  z-index: 5000;
+  padding-top: 0;
+  background-color: #ffffff;
+  height: 62px; }
+  nav.navbar.sticky-top {
+    padding-bottom: 0rem; }
   nav.navbar .navbar-nav {
     padding-right: 0; }
   nav.navbar .navbar-toggler {
     align-self: center;
-    padding-top: 0; }
-  nav.navbar .navbar-toggler-icon::before, nav.navbar .navbar-toggler::after {
+    padding-top: 0;
+    height: 1rem; }
+  nav.navbar .navbar-toggler-icon::before, nav.navbar .navbar-toggler-icon::after {
     width: 20px;
+    margin-bottom: 5px;
     height: 3px;
     background-color: #007FFF;
     display: block;
     position: relative;
-    content: ''; }
+    content: '';
+    transition: transform .8s; }
+  nav.navbar .active-toggler::before {
+    transform: translateY(3px) rotate(135deg);
+    transition: transform .8s; }
+  nav.navbar .active-toggler::after {
+    transform: translateY(-5px) rotate(-135deg);
+    transition: transform .8s; }
   nav.navbar .navbar-toggler::after {
     top: -20px; }
   nav.navbar .nav-item {
@@ -7330,10 +7345,13 @@ nav.navbar {
       padding-right: 0; }
       nav.navbar .nav-item .nav-link:hover {
         text-decoration: underline; }
-  nav.navbar .navbar-brand {
-    display: none; }
   nav.navbar .navbar-collapse {
     background-color: #ffffff; }
+  nav.navbar .navbar-brand {
+    position: absolute;
+    margin: 0 50%;
+    left: 0;
+    right: 0; }
 
 .quote-header {
   margin-top: 276px; }
@@ -7341,7 +7359,7 @@ nav.navbar {
     margin-bottom: 46px; }
 
 .image-block {
-  margin-top: 7.5rem; }
+  padding-top: 7.5rem; }
   .image-block h2 {
     text-align: left;
     color: #ffffff; }
@@ -7373,7 +7391,7 @@ nav.navbar {
     border-radius: 0px; }
 
 .skillbox {
-  margin-top: 7.5rem; }
+  padding-top: 7.5rem; }
   .skillbox p {
     margin-top: 1.875rem; }
   .skillbox .row > .col-md-6 {
@@ -7384,7 +7402,7 @@ nav.navbar {
   padding-left: 10px; }
 
 .links {
-  margin-top: 7.5rem; }
+  padding-top: 7.5rem; }
   .links p {
     display: inline-block;
     width: 100%;
@@ -7400,7 +7418,7 @@ nav.navbar {
     float: right; }
 
 .contacts {
-  margin-top: 7.5rem; }
+  padding-top: 7.5rem; }
   .contacts > div {
     margin-bottom: 60px; }
   .contacts .soc-icons {
@@ -7439,10 +7457,13 @@ footer.card-footer {
     .aside-text h4 {
       transform: rotate(0); }
   nav.navbar {
-    height: 160px;
+    margin-top: 0;
+    height: 62px;
     padding: 5.75rem 0;
     padding: 0;
-    background-color: #ffffff; }
+    padding-bottom: 0;
+    background-color: #ffffff;
+    z-index: 2000; }
     nav.navbar .nav-item {
       display: block;
       padding: 0;
@@ -7459,11 +7480,11 @@ footer.card-footer {
       z-index: 100;
       box-shadow: 0px -1px 43px -16px rgba(0, 0, 0, 0.75); }
     nav.navbar .navbar-brand {
-      width: 100%;
+      display: inline-block;
       text-align: center;
-      z-index: 99;
-      position: fixed;
-      display: block; }
+      z-index: 2020;
+      position: absolute;
+      margin: 0 43%; }
   .quote-header {
     margin-top: 172; }
   .image-block .card-columns {

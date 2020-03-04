@@ -5,37 +5,37 @@
      <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-
-    <div class="container-fluid"> 
-
-     <nav class="navbar navbar-expand-md fixed-top">
+  <body data-spy="scroll">
+   <nav class="navbar navbar-expand-md sticky-top" >
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapser">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon "></span>
         </button>
-        <a href="#" class="navbar-brand"> <img src="img/avatar.png" alt="avatar" text="home" ></a>
+        <div class="navbar-brand"> <img src="img/avatar.png" alt="avatar" text="home" ></div>
         <div class="collapse navbar-collapse row justify-content-md-center justify-content-sm-start" id="collapser">
+
           <ul class="navbar-nav col-md-8 col-xs-12">
-            <li class="nav-item col-md-2">
-              <a href="#" class="nav-link" id="test">Works</a>
+            <li class="nav-item col-md-2 ">
+              <a href="#image-block" class="nav-link">Works</a>
             </li>
             <li class="nav-item col-md-2 ">
-              <a href="#" class="nav-link">About</a>
+              <a href="#skillbox" class="nav-link" data-target=".navbar-collapse">About</a>
             </li>
+
             <li class="nav-item col-md-4 d-none d-md-block ">
-              <a href="#" class="nav-link">
-                <img src="img/avatar.png" alt="avatar">
-              </a>
+              
             </li> 
             <li class="nav-item col-md-2">
-              <a href="#" class="nav-link">Links</a>
+              <a href="#links" class="nav-link" data-target=".navbar-collapse">Links</a>
             </li>
             <li class="nav-item col-md-2">
-              <a href="#" class="nav-link">Contacts</a>
+              <a href="#contacts" class="nav-link" data-target=".navbar-collapse">Contacts</a>
             </li>
           </ul>
         </div>
       </nav>
+
+
+    <div class="container-fluid"> 
 
       <section class="quote-header row justify-content-center">
         <div class="col-xs-8 col-md-5 headline">
@@ -44,20 +44,20 @@
         <div class="w-100"></div>
         <div class="col-xs-2">
           <div class="row justify-content-xs-center">
-           <a href="#">
-            <img src="img/twitter.svg" alt="twitter" class="col-4">
+           <a href="#" class="col-4">
+            <img src="img/twitter.svg" alt="twitter" >
            </a>
-           <a href="#">
-            <img src="img/behance.svg" alt="behance" class="col-4">
+           <a href="#" class="col-4">
+            <img src="img/behance.svg" alt="behance" >
            </a>
-            <a href="#">
-              <img src="img/instagram.svg" alt="instagram" class="col-4">
+            <a href="#" class="col-4">
+              <img src="img/instagram.svg" alt="instagram">
             </a>
           </div> 
         </div>
       </section>
 
-      <section class="image-block row">
+      <section class="image-block row" id="image-block">
         <div class="col-xs-12 col-md-1"></div>   
         <div class="col-xs-12 col-md-1 aside-text">
           <div>
@@ -109,7 +109,7 @@
         </div>
       </section>
 
-      <section class="skillbox row">
+      <section class="skillbox row" id="skillbox">
         <div class="col-xs-12 col-md-1"></div>
         <div class="col-xs-12 col-md-1 aside-text">
          <div>
@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <section class="links row">
+      <section class="links row" id="links">
         <div class="col-xs-12 col-md-1"></div>
         <div class="col-xs-12 col-md-1 aside-text">
          <div>
@@ -177,10 +177,10 @@
     <hr>
    </div>
 
+ 
+    <div class="container-fluid" >
 
-    <div class="container-fluid">
-
-      <section class="contacts row">
+      <section class="contacts row" id="contacts">
         <div class="col-md-10 offset-md-2 offset-xs-0">
           <h2>Contacts</h2>
         </div>
@@ -200,7 +200,7 @@
         
         </div>
         <div class="col-md-6">
-          <form action="">
+          <form>
             <div class="row">
               <div class="form-group col-md-10">
                 <label for="username">Name</label>

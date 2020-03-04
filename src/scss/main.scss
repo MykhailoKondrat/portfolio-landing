@@ -12,8 +12,8 @@ $font-bold:700;
 $font-regular:400;
 $font-light:300;
 $base-font-size:16px;
-//repeatable margins 
-$row-margin:7.5rem;//margint between rows;
+//repeatable paddings 
+$row-padding:7.5rem;//margint between rows;
 // inputs styles 
 @mixin input-styles{
 	&:enabled{
@@ -111,23 +111,43 @@ button.btn{
 }
 //navbar style
 nav.navbar{
-	padding: 5.75rem 0;
+	margin: 5.75rem 0;
+	z-index:5000;
+	padding-top: 0;
+	background-color: #ffffff;
+	height: 62px;
+	&.sticky-top{
+		padding-bottom:0rem;
+	}
 	.navbar-nav{
 		padding-right: 0;
 	}
 	.navbar-toggler{
 		align-self: center;
 		padding-top: 0;
+		height: 1rem;
 	}
-	
-	.navbar-toggler-icon::before,.navbar-toggler::after{
+	.navbar-toggler-icon{
+		&::before,&::after{
 		width: 20px;
+		margin-bottom: 5px;
 		height: 3px;
 		background-color:$c-blue;
 		display: block;
 		position: relative;
 		content:'';
-
+		transition: transform .8s;
+		}
+	}
+	.active-toggler{
+		&::before{
+		transform: translateY(3px) rotate(135deg);
+        transition: transform .8s;
+		}
+		&::after{
+			transform: translateY(-5px) rotate(-135deg);
+			transition: transform .8s;
+		}
 	}
 	.navbar-toggler::after{
 		top:-20px;
@@ -158,11 +178,14 @@ nav.navbar{
 			}
 		}
 	}
-	.navbar-brand{
-			display: none;
-	}
 	.navbar-collapse{
 		background-color:#ffffff;
+	}
+	.navbar-brand{
+		position: absolute;
+		margin: 0 50%;
+		left:0;
+		right:0;
 	}
 }
 
@@ -174,7 +197,7 @@ nav.navbar{
 	}
 }
 .image-block{
-	margin-top: $row-margin;
+	padding-top: $row-padding;
 	h2{
 		text-align: left;
 		color: #ffffff;
@@ -212,7 +235,7 @@ nav.navbar{
 }
 
 .skillbox{
-	margin-top: $row-margin;
+	padding-top: $row-padding;
 	p{
 		margin-top: 1.875rem;
 	}
@@ -229,7 +252,7 @@ nav.navbar{
 }
 
 .links{
-	margin-top: $row-margin;
+	padding-top: $row-padding;
 	p{
 		display: inline-block;
 		width: 100%;
@@ -249,7 +272,7 @@ nav.navbar{
 	}
 }
 .contacts{
-	margin-top: $row-margin;
+	padding-top: $row-padding;
 	&>div{
 		margin-bottom: 60px;
 	}
@@ -280,7 +303,7 @@ footer.card-footer{
 }
 
 *{
-  // border: 1px solid blue;
+ // border: 1px solid blue;  
   outline:0px !important;
    appearance:none;
   
@@ -303,10 +326,13 @@ footer.card-footer{
 	}
 
 	nav.navbar {
-		height: 160px;
+		margin-top: 0;
+		height: 62px;
 		padding: 5.75rem 0;
 		padding: 0;
+		padding-bottom: 0;
 		background-color:#ffffff;
+		z-index:2000;
 
 		.nav-item{
 			display: block;
@@ -330,11 +356,12 @@ footer.card-footer{
 			box-shadow: 0px -1px 43px -16px rgba(0,0,0,0.75);
 		}
 		.navbar-brand{
-			width: 100%;
+		
+			display: inline-block;
 			text-align: center;
-			z-index:99;
-			position: fixed;
-			display: block;
+			z-index:2020;
+			position: absolute;
+				margin:0 43%;
 		}
 	}
 
